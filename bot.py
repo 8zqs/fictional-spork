@@ -17,7 +17,7 @@ def check_status():
         return False, "error"
 
 
-@tasks.loop(minutes=15)
+@tasks.loop(hours=12)
 async def notifier(channel_id):
     channel = client.get_channel(channel_id)
     if not channel:
